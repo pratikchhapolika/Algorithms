@@ -45,7 +45,7 @@ class Graph(object):
 			nv=self.addVertex(f)
 		if t not in self.vertList:
 			nv=self.addVertex(t)
-		self.vertList[f].add_neighbour(self.vertList[t],cost)
+		self.vertList[f].add_neighbour(self.vertList[t],cost)   # this is a directed graph
 
 	def getVertices(self):
 		return self.vertList.keys()
@@ -67,6 +67,6 @@ class Graph(object):
 # g.addEdge(5,4,8)
 # g.addEdge(5,2,1)
 # for v in g:
-# 	#print v
-# 	for w in v.getConnections():
-# 		print "%s, %s"%(v.getId(),w.getId())
+# 	print v
+# 	# for w in v.getConnections():
+# 	# 	print "%s, %s"%(v.getId(),w.getId())

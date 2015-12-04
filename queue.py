@@ -15,9 +15,9 @@ class Queue(object):
 	def size(self):
 		return len(self.items)
 
-q=Queue()
-q.enqueue(5)
-q.enqueue('hello')
-q.enqueue('dog')
-q.enqueue(3)
-print q.dequeue()
+# q=Queue()
+# q.enqueue(5)
+# q.enqueue('hello')
+# q.enqueue('dog')
+# q.enqueue(3)
+# print q.dequeue()
