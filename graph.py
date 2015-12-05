@@ -1,14 +1,19 @@
+import sys
+
 class Vertex(object):
 
 	def __init__(self,key):
 		self.id=key
 		self.connectedTo={}   # format is:- {key:value} => {vertex:weight}
+		self.color = 'white'
+		self.distance = sys.maxsize
+		self.predecessor = None
 
 	def add_neighbour(self,vertex,weight):
 		self.connectedTo[vertex]=weight
 
 	def __str__(self):
-		return str(self.id)+" is connected to "+str([x.id for x in self.connectedTo])
+		return str(self.id) + ", color:" + self.color + ", distance:" + str(self.distance) + ", predecessor:[" + str(self.predecessor)+ "] , " + str(self.id) + " is connected to " + str([x.id for x in self.connectedTo])
 
 	def getConnections(self):  # getVertices
 		return self.connectedTo.keys()  # gets the keys i.e. vertices
@@ -18,6 +23,24 @@ class Vertex(object):
 
 	def getWeight(self,vertex):
 		return self.connectedTo[vertex]  # gets the value i.e weight
+
+	def setColor(self,color):
+		self.color = color
+		
+	def setDistance(self,d):
+		self.distance = d
+
+	def setPredecessor(self,p):
+		self.predecessor = p
+
+	def getColor(self):
+		return self.color
+
+	def getDistance(self):
+		return self.distance
+
+	def getPredecessor(self):
+		return self.predecessor
 
 class Graph(object):
 
