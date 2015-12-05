@@ -5,15 +5,21 @@ class Vertex(object):
 	def __init__(self,key):
 		self.id=key
 		self.connectedTo={}   # format is:- {key:value} => {vertex:weight}
+		
+		#used for bfs
 		self.color = 'white'
 		self.distance = sys.maxsize
 		self.predecessor = None
+
+		#used for dfs
+		self.discovery = 0
+		self.finish = 0
 
 	def add_neighbour(self,vertex,weight):
 		self.connectedTo[vertex]=weight
 
 	def __str__(self):
-		return str(self.id) + ", color:" + self.color + ", distance:" + str(self.distance) + ", predecessor:[" + str(self.predecessor)+ "] , " + str(self.id) + " is connected to " + str([x.id for x in self.connectedTo])
+		return str(self.id) + ", color:" + self.color + ", distance:" + str(self.distance) + ", predecessor:[" + str(self.predecessor)+ "] , " + ", discovery: " + str(self.discovery) + ", finish: " + str(self.finish) + ", " + str(self.id) + " is connected to " + str([x.id for x in self.connectedTo])
 
 	def getConnections(self):  # getVertices
 		return self.connectedTo.keys()  # gets the keys i.e. vertices
@@ -41,6 +47,18 @@ class Vertex(object):
 
 	def getPredecessor(self):
 		return self.predecessor
+
+	def setDiscovery(self,dtime):
+		self.discovery = dtime
+		
+	def setFinish(self,ftime):
+		self.finish = ftime
+		
+	def getFinish(self):
+		return self.finish
+		
+	def getDiscovery(self):
+		return self.discovery
 
 class Graph(object):
 

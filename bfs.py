@@ -18,8 +18,6 @@ def sample():
 
 	return g
 
-g=sample()
-start=g.getVertex('f')
 
 def BFS(g,start):  # g is the graph and start is the starting vertex
 	start.setDistance(0)
@@ -36,6 +34,8 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 				verticesQueue.enqueue(nbr)
 		currentVertex.setColor('black')
 
+g=sample()
+start=g.getVertex('f')
 BFS(g,start)
 
 def traverse(y):
