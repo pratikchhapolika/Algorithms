@@ -34,17 +34,18 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 				verticesQueue.enqueue(nbr)
 		currentVertex.setColor('black')
 
+
 g=sample()
-start=g.getVertex('f')
+start=g.getVertex('a')
 BFS(g,start)
 
 def traverse(y):
 	x=y
 	while x.getPredecessor():
-		print x.id
+		print x.id, x.getDistance()
 		x=x.getPredecessor()
-	print x.id
+	print x.id, x.getDistance()
 
-traverse(g.getVertex('a'))
+traverse(g.getVertex('f'))
 
 

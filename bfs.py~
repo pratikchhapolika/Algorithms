@@ -1,8 +1,23 @@
 from graph import Graph,Vertex
 from queue import Queue
-from wordLadder import buildGraph
 
-g=buildGraph('a.txt')
+def sample():
+	g=Graph()
+	g.addEdge('a','b')
+	g.addEdge('a','c')
+	g.addEdge('b','a')
+	g.addEdge('b','d')
+	g.addEdge('b','e')
+	g.addEdge('c','a')
+	g.addEdge('c','f')
+	g.addEdge('d','b')
+	g.addEdge('e','b')
+	g.addEdge('e','f')
+	g.addEdge('f','c')
+	g.addEdge('f','e')
+
+	return g
+
 
 def BFS(g,start):  # g is the graph and start is the starting vertex
 	start.setDistance(0)
@@ -19,7 +34,9 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 				verticesQueue.enqueue(nbr)
 		currentVertex.setColor('black')
 
-BFS(g,(i for i in g))
+g=sample()
+start=g.getVertex('f')
+BFS(g,start)
 
 def traverse(y):
 	x=y
@@ -28,6 +45,6 @@ def traverse(y):
 		x=x.getPredecessor()
 	print x.id
 
-traverse(g.getVertex('sage'))
+traverse(g.getVertex('a'))
 
 
