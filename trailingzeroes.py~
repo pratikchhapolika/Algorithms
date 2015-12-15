@@ -7,4 +7,4 @@ def trailingZeroes(n):
 			l.append(a)
 	print int(sum(l))		
 
-trailingZeroes(5)
+trailingZeroes(4)
