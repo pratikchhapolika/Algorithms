@@ -2,34 +2,38 @@ from graph import Graph,Vertex
 from queue import Queue
 
 
-def Maze(bdsize):  #bdsize is the board size
+def Maze():  #bdsize is the board size
 	m=Graph()
-	for row in range(bdsize):
-		for col in range(bdsize):
-			nodeId=posToNodeId(row,col,bdsize)
-			newPositions=genLegalMoves(row,col,bdsize)
-			for i in newPositions:
-				nid=posToNodeId(i[0],i[1],bdsize)
-				if nid!=12 and nid!=11 and nid!=10:
+	f=open('board.txt','r')
+	l=[list(i[:-1]) for i in f]
+	length=len(l[0])
+
+	for row in range(length):
+		for col in range(length):
+			if l[row][col]!='7':
+				nodeId=posToNodeId(row,col,length)
+				newPositions=genLegalMoves(row,col,length)
+				for i in newPositions:
+					nid=posToNodeId(i[0],i[1],length)
 					m.addEdge(nodeId,nid)
 
 	return m
 
-def posToNodeId(row,col,bdsize):
-	return (row*bdsize)+col
+def posToNodeId(row,col,length):
+	return (row*length)+col
 
-def genLegalMoves(x,y,bdsize):
+def genLegalMoves(x,y,length):
 	newMoves=[]
 	moveOffsets = [(1,0),(0,1),(-1,0),(0,-1)]
 	for i in moveOffsets:
 		newX=x+i[0]
 		newY=y+i[1]
-		if legalCoord(newX,bdsize) and legalCoord(newY,bdsize):
+		if legalCoord(newX,length) and legalCoord(newY,length):
 			newMoves.append((newX,newY))
 	return newMoves
 
-def legalCoord(x,bdsize):
-	if x>=0 and x<bdsize:
+def legalCoord(x,length):
+	if x>=0 and x<length:
 		return True
 	else:
 		return False
@@ -50,7 +54,7 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 		currentVertex.setColor('black')
 
 
-g=Maze(5)
+g=Maze()
 
 start=g.getVertex(24)
 
