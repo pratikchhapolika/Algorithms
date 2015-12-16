@@ -5,7 +5,7 @@ from queue import Queue
 def Maze():  #bdsize is the board size
 	m=Graph()
 	f=open('board.txt','r')
-	l=[list(i[:-1]) for i in f]
+	l=[i[:-1] for i in f]
 	length=len(l[0])
 
 	for row in range(length):
