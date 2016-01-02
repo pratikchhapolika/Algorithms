@@ -15,6 +15,9 @@ class Queue(object):
 	def size(self):
 		return len(self.items)
 
+	def top(self):
+		return self.items[len(self.items)-1]
+
 # q=Queue()
 # q.enqueue(5)
 # q.enqueue('hello')
@@ -22,3 +25,4 @@ class Queue(object):
 # q.enqueue(3)
 # print q.dequeue()
 # print q.items
+# print q.top()

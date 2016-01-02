@@ -1,4 +1,4 @@
-l=[2,-8,3,-2,2]
+l=[-5,0,-4,1,4,3]
 p=[]
 for i in range(1,len(l)+1):
 	for j in range(i):

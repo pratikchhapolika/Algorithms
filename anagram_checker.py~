@@ -12,4 +12,4 @@ def anagrams(word1,word2):
 		done=False
 	print done
 
-anagrams("secure","rescue")
+anagrams("live","evil")
