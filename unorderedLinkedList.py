@@ -101,24 +101,24 @@ class UnorderedList(object):
 
 
 
-mylist=UnorderedList()
-mylist.add(31)
-mylist.add(77)
-mylist.add(17)
-mylist.add(93)
-mylist.add(26)
-mylist.add(54)
-mylist.display()
-print
-print mylist.search(77)
-mylist.size()
-mylist.remove(17)
-mylist.display()
-print "The reversed linked list is:"
-mylist.reverse()
-mylist.display()
-print
-mylist.index(1)
+# mylist=UnorderedList()
+# mylist.add(31)
+# mylist.add(77)
+# mylist.add(17)
+# mylist.add(93)
+# mylist.add(26)
+# mylist.add(54)
+# mylist.display()
+# print
+# print mylist.search(77)
+# mylist.size()
+# mylist.remove(17)
+# mylist.display()
+# print "The reversed linked list is:"
+# mylist.reverse()
+# mylist.display()
+# print
+# mylist.index(1)
 
 
 

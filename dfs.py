@@ -91,6 +91,7 @@ def dfsvisit(start):
 		if newvertex.getColor()=='white':
 			newvertex.setPredecessor(start)
 			dfsvisit(newvertex)
+			print newvertex.id
 	start.setColor('black')
 	time+=1
 	start.setFinish(time)
@@ -98,11 +99,11 @@ def dfsvisit(start):
 gr=sample()
 DFS(gr)
 
-def traverse(y):
-	x=y
-	while x.getPredecessor():
-		print x.id
-		x=x.getPredecessor()
-	print x.id
+# def traverse(y):
+# 	x=y
+# 	while x.getPredecessor():
+# 		print x.id
+# 		x=x.getPredecessor()
+# 	print x.id
 
-traverse(gr.getVertex('v'))
+# traverse(gr.getVertex('v'))

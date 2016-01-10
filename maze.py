@@ -16,7 +16,7 @@ def Maze():  #bdsize is the board size
 				for i in newPositions:
 					nid=posToNodeId(i[0],i[1],length)
 					m.addEdge(nodeId,nid)
-
+	f.close()
 	return m
 
 def posToNodeId(row,col,length):

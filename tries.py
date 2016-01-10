@@ -60,7 +60,8 @@ def remove(trie,word,depth):
 
 
 
-trie=make_trie('yash','akash')
-print in_trie(trie,'yash')
-remove(trie,'akash',0)
+trie=make_trie('yash','john','jack')
+print trie
+print in_trie(trie,'john')
+remove(trie,'john',0)
 print trie

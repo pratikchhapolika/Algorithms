@@ -1,23 +1,24 @@
 class BinaryTree(object):
 
-	def __init__(self,root):
+	def __init__(self,root,parent=None):
 		self.key=root
 		self.left=None
 		self.right=None
+		self.parent=parent
 
-	def insert_left(self,new_node):
+	def insert_left(self,new_node,parent=None):
 		if self.left==None:
-			self.left=BinaryTree(new_node)
+			self.left=BinaryTree(new_node,parent=self)  # returns the parent
 		else:
-			t=BinaryTree(new_node)
+			t=BinaryTree(new_node,parent=self)
 			t.left=self.left
 			self.left=t
 
-	def insert_right(self,new_node):
+	def insert_right(self,new_node,parent=None):
 		if self.right==None:
-			self.right=BinaryTree(new_node)
+			self.right=BinaryTree(new_node,parent=self)
 		else:
-			t=BinaryTree(new_node)
+			t=BinaryTree(new_node,parent=self)
 			t.right=self.right
 			self.right=t
 
@@ -32,18 +33,22 @@ class BinaryTree(object):
 
 	def get_root(self):
 		return self.key
+
+	def node_parent(self,node):
+		return node.parent
+
+
  
-tree = BinaryTree(3)
-tree.insert_left(9)
-tree.insert_right(20)
-tree.get_left_child().insert_left(4)
-tree.get_left_child().insert_right(5)
-tree.get_right_child().insert_left(15)
-tree.get_right_child().insert_right(7)
-#tree.get_left_child().get_left_child().insert_left(8)
-# tree.get_left_child().get_right_child().insert_left(11)
-# tree.get_right_child().get_left_child().insert_left(16)
-# tree.get_right_child().get_right_child().insert_right(27)
+tree = BinaryTree(1)
+tree.insert_left(2)
+tree.insert_right(5)
+tree.get_left_child().insert_left(3)
+tree.get_left_child().insert_right(4)
+# tree.get_right_child().insert_left(13)
+tree.get_right_child().insert_right(6)
+# tree.get_left_child().get_left_child().insert_left(7)
+# tree.left.left.insert_right(2)
+# tree.right.right.insert_right(1)
 
 # def reverse(tree):
 # 	if tree!=None:
@@ -91,7 +96,9 @@ tree.get_right_child().insert_right(7)
 # 		l.append(tree.key)
 # 		inorder(tree.right)
 # 	return l
-		
+
+# print inorder(tree)
+
 # def getSuccessor(tree, B):
 # 	suc=[]
 # 	if tree==None:
@@ -121,8 +128,18 @@ tree.get_right_child().insert_right(7)
 # print kthsmallest(tree,3)
 
 
+from unorderedLinkedList import UnorderedList
+u=UnorderedList()
+def preorder(tree):
+	if tree==None:
+		return
+	else:
+		u.add(tree.key)
+		preorder(tree.left)
+		preorder(tree.right)
+		return u
 
-
-
-
+l=preorder(tree)
+l.reverse()
+l.display()
 
