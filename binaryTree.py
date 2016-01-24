@@ -39,16 +39,19 @@ class BinaryTree(object):
 
 
  
-tree = BinaryTree(1)
-tree.insert_left(2)
-tree.insert_right(5)
-tree.get_left_child().insert_left(3)
-tree.get_left_child().insert_right(4)
-# tree.get_right_child().insert_left(13)
-tree.get_right_child().insert_right(6)
-# tree.get_left_child().get_left_child().insert_left(7)
-# tree.left.left.insert_right(2)
-# tree.right.right.insert_right(1)
+# tree = BinaryTree(1)
+# tree.insert_left(2)
+# tree.insert_right(3)
+# tree.get_left_child().insert_left(4)
+# tree.get_left_child().insert_right(5)
+# tree.get_right_child().insert_left(6)
+# tree.get_right_child().insert_right(7)
+# tree.left.left.insert_left(8)
+# tree.left.left.insert_right(9)
+# tree.right.left.insert_left(10)
+# tree.right.left.insert_right(11)
+# tree.right.right.insert_right(12)
+
 
 # def reverse(tree):
 # 	if tree!=None:
@@ -128,18 +131,18 @@ tree.get_right_child().insert_right(6)
 # print kthsmallest(tree,3)
 
 
-from unorderedLinkedList import UnorderedList
-u=UnorderedList()
-def preorder(tree):
-	if tree==None:
-		return
-	else:
-		u.add(tree.key)
-		preorder(tree.left)
-		preorder(tree.right)
-		return u
+# from unorderedLinkedList import UnorderedList
+# u=UnorderedList()
+# def preorder(tree):
+# 	if tree==None:
+# 		return
+# 	else:
+# 		u.add(tree.key)
+# 		preorder(tree.left)
+# 		preorder(tree.right)
+# 		return u
 
-l=preorder(tree)
-l.reverse()
-l.display()
+# l=preorder(tree)
+# l.reverse()
+# l.display()
 

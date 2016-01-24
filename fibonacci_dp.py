@@ -4,14 +4,13 @@ def fib(n):
 	if n in memo:
 		return memo[n]
 	if n<=2:
-		f=1
+		memo[n]=1
 	else:
-		f=fib(n-1)+fib(n-2)
-	memo[n]=f
+		memo[n]=fib(n-1)+fib(n-2)
 
-	return f
+	return memo[n]
 
-print fib(8)
+print fib(100)
 
 # BOTTOM-UP APPROACH
 # def fibonacci(n):

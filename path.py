@@ -10,6 +10,7 @@ tree.get_right_child().insert_right(4)
 tree.get_left_child().get_left_child().insert_left(7)
 tree.left.left.insert_right(2)
 tree.right.right.insert_right(1)
+tree.right.right.insert_left(5)
 
 # def path(tree):
 # 	paths = []

@@ -99,15 +99,25 @@ class UnorderedList(object):
 			print new.getData()
 			new=new.getNext()
 
+	# this calculates the middle element in the list without
+	# calculating the length of the linked list
+	def middle(self):
+		current=self.head
+		previous=self.head
+		while current!=None and current.next!=None:
+			current=current.next.next
+			previous=previous.next
+		print previous.data
 
 
-# mylist=UnorderedList()
-# mylist.add(31)
-# mylist.add(77)
-# mylist.add(17)
-# mylist.add(93)
-# mylist.add(26)
-# mylist.add(54)
+mylist=UnorderedList()
+mylist.add(31)
+mylist.add(77)
+mylist.add(17)
+mylist.add(93)
+mylist.add(26)
+mylist.add(54)
+mylist.add(10)
 # mylist.display()
 # print
 # print mylist.search(77)
@@ -119,6 +129,8 @@ class UnorderedList(object):
 # mylist.display()
 # print
 # mylist.index(1)
+# print
+mylist.middle()
 
 
 

@@ -55,8 +55,10 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 
 
 g=Maze()
+for i in g:
+	print i
 
-start=g.getVertex(35)
+start=g.getVertex(15)
 
 BFS(g,start)
 
