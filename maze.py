@@ -38,6 +38,12 @@ def legalCoord(x,length):
 	else:
 		return False
 
+def nodeToPosId(nid,length):
+	row=nid//length
+	col=nid%length
+	return row,col
+
+
 def BFS(g,start):  # g is the graph and start is the starting vertex
 	start.setDistance(0)
 	start.setPredecessor(None)
@@ -57,6 +63,7 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 g=Maze()
 for i in g:
 	print i
+
 
 start=g.getVertex(15)
 

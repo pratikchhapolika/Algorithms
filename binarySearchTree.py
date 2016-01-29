@@ -1,7 +1,7 @@
 class BinarySearchTree(object):
 
 	def __init__(self):
-		self.root=root
+		self.root=None
 		self.size=0
 
 	def length(self):
@@ -136,7 +136,16 @@ class TreeNode(object):
 		if self.hasRightChild():
 			self.rightChild.parent=self
 
+mytree = BinarySearchTree()
+count=0
+import itertools
+l=list(itertools.permutations([1,2,3]))
+
+for i in range(len(l)):
+	for index,j in enumerate(l[i]):
+		mytree[index]=j
+	count+=1
+
+print count
 
 
-
-		

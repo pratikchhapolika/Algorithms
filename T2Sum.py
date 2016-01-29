@@ -11,7 +11,7 @@ def t2sum(l,target):
 			large-=1
 	return False
 
-l=[9,10,20]
-target=19
+l=[2,2,3,4]
+target=4
 
 print t2sum(l,target)
