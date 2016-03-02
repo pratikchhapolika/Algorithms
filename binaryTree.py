@@ -39,13 +39,13 @@ class BinaryTree(object):
 
 
  
-# tree = BinaryTree(1)
-# tree.insert_left(2)
-# tree.insert_right(3)
-# tree.get_left_child().insert_left(4)
-# tree.get_left_child().insert_right(5)
-# tree.get_right_child().insert_left(6)
-# tree.get_right_child().insert_right(7)
+tree = BinaryTree(2)
+tree.insert_left(1)
+tree.insert_right(3)
+tree.get_left_child().insert_left(4)
+tree.get_left_child().insert_right(5)
+tree.get_right_child().insert_left(6)
+tree.get_right_child().insert_right(7)
 # tree.left.left.insert_left(8)
 # tree.left.left.insert_right(9)
 # tree.right.left.insert_left(10)
@@ -70,11 +70,11 @@ class BinaryTree(object):
 # 		preorder(tree.right)
 
 
-# def inorder(tree):
-# 	if tree!=None:
-# 		inorder(tree.left)
-# 		print tree.key
-# 		inorder(tree.right)
+def inorder(tree):
+	if tree!=None:
+		inorder(tree.left)
+		print tree.key
+		inorder(tree.right)
 
 # def postorder(tree):
 # 	if tree!=None:
@@ -83,7 +83,7 @@ class BinaryTree(object):
 # 		print tree.key
 
 
-# inorder(tree)
+inorder(tree)
 # print
 # preorder(tree)
 # print

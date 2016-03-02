@@ -1,11 +1,10 @@
 from graph import Graph,Vertex
 from queue import Queue
 
-
+f=open('board.txt','r')
+l=[i[:-1] for i in f]
 def Maze():  #bdsize is the board size
 	m=Graph()
-	f=open('board.txt','r')
-	l=[i[:-1] for i in f]
 	length=len(l[0])
 
 	for row in range(length):
@@ -61,8 +60,8 @@ def BFS(g,start):  # g is the graph and start is the starting vertex
 
 
 g=Maze()
-for i in g:
-	print i
+# for i in g:
+# 	print i
 
 
 start=g.getVertex(15)
@@ -73,7 +72,11 @@ def traverse(y):
 	x=y
 	while x.getPredecessor():
 		print x.id, x.getDistance()
+		# row,col=nodeToPosId(x.id,4)
+		# print l[row][col]
 		x=x.getPredecessor()
 	print x.id, x.getDistance()
+	# row,col=nodeToPosId(x.id,4)
+	# print l[row][col]
 
-traverse(g.getVertex(0))
+traverse(g.getVertex(5))

@@ -17,5 +17,5 @@ def same(text,sample):
 		print "String not in same order"
 
 
-# same("abcNjhgAhGjhfhAljhRkhgRbhjbevfhO","NAGARRO")
-same("bangalore","blr")
+same("abcNjhgAAAhGGGjhfhAljhRrkhgRbhjbevfhO","NAGARRO")
+# same("bangalore","Blr")
