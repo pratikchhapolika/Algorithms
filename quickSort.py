@@ -1,6 +1,7 @@
 def quicksort(A,start,end):  # Time complexity is Average Case:- O(nlogn), Worst Case:- O(n^2)
 	if start<end:
 		pIndex=partition(A,start,end)
+		print A
 		quicksort(A,start,pIndex-1)
 		quicksort(A,pIndex+1,end)
 	return A

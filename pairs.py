@@ -17,24 +17,44 @@
 # array = map(int, b.split())
 
 
-# O(n) solution using 2 pointers 
+# O(nlogn) solution using 2 pointers 
 # def pairs(l,k):
-# 	p=[]
-# 	l=sorted(l)
-# 	i=0
-# 	j=0
-# 	size=len(l)
-# 	while i!=size and j!=size:
-# 		if abs(l[j]-l[i])==k:
-# 			p.append([l[i],l[j]])
-# 			i+=1
-# 			j+=1
-# 		elif abs(l[j]-l[i])>k:
-# 			j+=1
-# 		else:
-# 			i+=1
+	# p=[]
+	# l=sorted(l)
+	
+	# 1st method
+	# i=0
+	# j=0
+	
+	# size=len(l)
+	
+	# 2nd method
+	# i=0
+	# j=size-1
 
-# 	print len(p)
+	# 1st method
+	# while i!=size and j!=size:
+	# 	if abs(l[j]-l[i])==k:
+	# 		p.append([l[i],l[j]])
+	# 		i+=1
+	# 		j+=1
+	# 	elif abs(l[j]-l[i])>k:
+	# 		j+=1
+	# 	else:
+	# 		i+=1
+
+	# 2nd method
+	# while i<size and j<size:
+	# 	if l[j]-l[i]==k:
+	# 		print l[j],l[i]
+	# 		i+=1
+	# 		j+=1
+	# 	elif l[j]-l[i]>k:
+	# 		j-=1
+	# 	else:
+	# 		i+=1
+
+	# print p
 
 # a=raw_input()
 # length,k=map(int,a.split())
@@ -81,8 +101,8 @@ def pairs(l,k):
 		if key+k in d:
 			p.append([key,key+k])
 
-	print len(p)
+	print p
 
-l=[1,5,3,4,2]
-k=2
+l=[8, 12, 16, 4, 0, 20]
+k=4
 pairs(l,k)

@@ -60,7 +60,7 @@ def lca(root,v,w):
 	dw=depth(root,w)
 
 	while dv>dw:
-		v=root.node_parent(v)
+		v=v.parent
 		dv-=1
 
 	while dv<dw:

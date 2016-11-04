@@ -84,7 +84,7 @@ def path(tree):
 
 	return final
 
-# print path(tree)
+print path(tree)
 
 def sumrootleaf():
 	list_tree=[]

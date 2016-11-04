@@ -23,7 +23,7 @@ def recover(root):
 	for i in range(len(p)-1):
 		if p[i]>p[i+1]:
 			y.extend([p[i],p[i+1]])
-
+	
 	return [min(y),max(y)]
 
 print recover(tree)

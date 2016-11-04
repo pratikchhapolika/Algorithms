@@ -23,6 +23,7 @@ def zigzag(root):
 				if node.right:
 					queue.append(node.right)
 
+
 			ans.append(level)
 			line+=1
 		return ans

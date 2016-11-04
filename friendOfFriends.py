@@ -9,3 +9,4 @@ while a>0:
 	a-=1
 
 print len(set(friend_of_friends).difference(set(friend)))
+

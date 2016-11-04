@@ -11,4 +11,4 @@ def subsets(l,length):
 	print ans
 
 
-subsets([2,3,2],3)
+subsets([1,2,3],3)

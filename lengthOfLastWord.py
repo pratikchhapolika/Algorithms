@@ -9,4 +9,4 @@ def lengthOfLastWord(A):
     n=len(l)-1
     return len(l[n])
 
-lengthOfLastWord("yash    ")
+print lengthOfLastWord("yash    ")

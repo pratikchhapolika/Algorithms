@@ -43,3 +43,4 @@ def palindrome(str1):
 palindrome("maam")
 palindrome("yash")
 palindrome("yashh")
+palindrome("linkedinnideknil")

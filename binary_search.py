@@ -5,7 +5,7 @@ def binary(A,x):   # binary search only works for sorted lists
 	while(low<=high):
 		mid=low + (high-low)/2  # (low+high)/2 may cause overflow
 		if x==A[mid]:
-			return "Number found at index position %s" %(mid)
+			return mid
 		elif x<A[mid]:
 			high=mid-1
 		else:

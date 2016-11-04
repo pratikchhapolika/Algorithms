@@ -87,7 +87,7 @@ def dfsvisit(graph,start,x,path=[]):
 	return l
 
 # x signifies the length of phone number
-x=2
+x=4
 for i in [1,2,3,4,6,7,8,9]:
 	p.append(dfsvisit(graph,str(i),x))
 

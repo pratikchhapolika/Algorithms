@@ -4,9 +4,9 @@ from graph import Graph,Vertex
 def sample():
 	g=Graph()
 	g.addEdge('a','b',2)
-	g.addEdge('a','d',3)
+	g.addEdge('a','d',4)
 	g.addEdge('b','a',2)
-	g.addEdge('d','a',3)
+	g.addEdge('d','a',4)
 	g.addEdge('b','c',1)
 	g.addEdge('d','c',2)
 	g.addEdge('c','b',1)

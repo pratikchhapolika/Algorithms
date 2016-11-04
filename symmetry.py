@@ -15,7 +15,7 @@ def Symmetry():
 	equal=True
 	sym=inorder(tree)
 	length=len(sym)
-	print sym
+	print sym,length
 
 	while length>1 and equal:
 		first=sym.pop()
