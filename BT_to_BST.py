@@ -21,14 +21,16 @@ def inorder(root, l):
 def replace_inorder(root, l):
 	if root!=None:
 		replace_inorder(root.left, l)
-		root.key = l.pop()
+		root.key = l[replace_inorder.index]
+		replace_inorder.index+=1
 		replace_inorder(root.right, l)
 
 def convert(root):
 	l=[]
 	inorder(root, l)
 	l = sorted(l)
-	replace_inorder(root, l[::-1])
+	replace_inorder.index = 0
+	replace_inorder(root, l)
 	preorder(root)
 
 convert(tree)
