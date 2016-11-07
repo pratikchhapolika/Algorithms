@@ -69,8 +69,8 @@ class UnorderedList(object):
 		next=None
 
 		while current!=None:
-			next=current.getNext()
-			current.setNext(previous)     # reverse statement
+			next=current.next
+			current.next = previous     # reverse statement
 			previous=current
 			current=next
 
@@ -80,7 +80,7 @@ class UnorderedList(object):
 		current=self.head
 		
 		while current!=None:
-			print current.getData()
+			print current.getData(),
 			current=current.getNext()
 
 	def index(self,k):
@@ -118,19 +118,18 @@ mylist.add(93)
 mylist.add(26)
 mylist.add(54)
 mylist.add(10)
-# mylist.display()
-# print
+
+mylist.display()
+print
 # print mylist.search(77)
 # mylist.size()
 # mylist.remove(17)
 # mylist.display()
 # print "The reversed linked list is:"
-# mylist.reverse()
-# mylist.display()
+mylist.reverse()
+mylist.display()
 # print
 # mylist.index(1)
 # print
-mylist.middle()
-
-
+# mylist.middle()
 

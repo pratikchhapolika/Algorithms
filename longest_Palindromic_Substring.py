@@ -1,6 +1,6 @@
 # Find all palindromes in a given string
 # Time complexity:- O(n^2)
-string='aabaddac'
+string='aaaabaaa'
 result=''
 final=[]
 length=len(string)
@@ -18,4 +18,4 @@ for i in range(length):
 	# for odd length palindromes
 	checkPalindrome(result,string,i,i)
 
-print set(final)
+print max(set(final), key=len)

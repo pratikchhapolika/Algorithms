@@ -11,12 +11,12 @@ def arrayBST(l,start,end):
 def inorder(tree):
 	if tree!=None:
 		inorder(tree.left)
-		print tree.key
+		print tree.key,
 		inorder(tree.right)
 
 def preorder(tree):
 	if tree!=None:
-		print tree.key
+		print tree.key,
 		preorder(tree.left)
 		preorder(tree.right)
 
