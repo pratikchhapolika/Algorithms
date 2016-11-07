@@ -14,21 +14,15 @@ tree.right.right.insert_left(5)
 
 def path(tree):
 	paths = []
-	if not (tree.left or tree.right):
+	if tree.left==None and tree.right==None:
 		return [[tree.key]]    # this will return all the leaf nodes
 	if tree.left:
-		paths.extend([[tree.key] + child for child in path(tree.left)])
+		paths.extend([tree.key] + child for child in path(tree.left))
 	if tree.right:
-		paths.extend([[tree.key] + child for child in path(tree.right)])
+		paths.extend([tree.key] + child for child in path(tree.right))
 	return paths
 
-k=22
-p=[]
-p=path(tree)
-print p
-for i in p:
-	if sum(i)==k:
-		print 1
+print path(tree)
 
 
 
