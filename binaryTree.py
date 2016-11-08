@@ -114,14 +114,13 @@ class BinaryTree(object):
 # print getSuccessor(tree,10)
 
 
-
 # def height(tree):
 # 	if tree==None:
 # 		return 0
 # 	else:
 # 		return max(height(tree.left), height(tree.right))+1
-
 # print height(tree)
+
 
 # def kthsmallest(root, k):
 # 	p=[]
