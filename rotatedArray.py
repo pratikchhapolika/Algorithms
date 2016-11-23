@@ -7,8 +7,8 @@ def rotate(l,n):
 	for i in range(size-(n-1)):
 		p.append(l[i])
 
-	print p
+	return p
 
 
-l=[1,2,3,4,5,6]
-rotate(l,2)
+print rotate([1,2,3,4,5,6],2)
+print rotate([1,0,0], 2)

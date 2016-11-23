@@ -9,7 +9,7 @@ def maximal_subarray(l):
 		ans=max(ans,s)
 	print ans
 
-l=[-3,-2,-1,5]
-maximal_subarray(l)
+maximal_subarray([-3,-2,-1,5])
+maximal_subarray([1,-1,-2])
 
 

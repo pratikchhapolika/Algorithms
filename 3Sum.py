@@ -3,17 +3,28 @@
 def find_triplets(l,n):
 	# Using sorting and 2 pointer approach
 	l=sorted(l)
-	for i in range(len(l)):
+	i=0
+	result=[]
+	
+	while i<len(l):
 		j=i+1
 		k=len(l)-1
 		while j<k:
 			if l[i]+l[j]+l[k]==n:
-				return l[i],l[j],l[k]
+				result.append([l[i],l[j],l[k]]) 
+				j+=1
+				k-=1
 			elif l[i]+l[j]+l[k]<n:
 				j+=1
 			else:
 				k-=1
-	return 'No triplet found'
+		i+=1
+	
+	final=[]
+	for i in result:
+		if i not in final:
+			final.append(i)
+	return final
 
 
 	#########################################
@@ -31,7 +42,6 @@ def find_triplets(l,n):
 	# return 'No triplet found'
 
 
+print find_triplets([12,3,4,1,6,9], 24)
+print find_triplets([-1,0,1,2,-1,-4], 0)
 
-l=[12,3,4,1,6,9]
-n=24
-print find_triplets(l,n)
