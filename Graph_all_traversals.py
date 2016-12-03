@@ -47,3 +47,5 @@ graph = {'A':['B','C','D'],'B':['D','E'],'C':['D','E'],'D':['E'],'E':['A'], 'F':
 print 'recursive dfs ', recursive_dfs(graph, 'A')
 print 'iterative dfs ', iterative_dfs(graph, 'A')
 print 'iterative bfs ', bfs_paths(graph, 'A', 'E')
+
+

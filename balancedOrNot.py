@@ -14,26 +14,34 @@ def height(tree):
 	else:
 		return max(height(tree.left), height(tree.right))+1
 
-l=[]
 def balanced(tree):
 	if tree==None:
-		return 
+		return -1
 	else:
-		h1=height(tree.left)
-		h2=height(tree.right)
-		if abs(h1-h2)>1:
-			l.append(False)
+		# h1=height(tree.left)
+		# h2=height(tree.right)
+		# if abs(h1-h2)<=1 and balanced(tree.left) and balanced(tree.right):
+		# 	return 1
+		# else:
+		# 	return 0
+
+		left_height = balanced(tree.left)
+		if left_height==-1:
+			return -1
+		
+		right_height = balanced(tree.right)
+		if right_height==-1:
+			return -1
+
+		diff = abs(left_height - right_height)
+		if diff>1:
+			return -1
 		else:
-			l.append(True)
-		if tree.left:
-			balanced(tree.left)
-		if tree.right:
-			balanced(tree.right)
+			return max(left_height, right_height) + 1
 
-	return l
+def check(tree):
+	if balanced(tree)==-1:
+		return False
+	return True
 
-p=balanced(tree)
-if False in p:
-	print 'The binary tree is not height balanced'
-else:
-	print 'The binary tree is height balanced'
+print check(tree)

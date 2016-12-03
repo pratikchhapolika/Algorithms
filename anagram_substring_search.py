@@ -1,14 +1,14 @@
 def anagram_substring(string, pattern):
 	string_count = [0]*256
 	pattern_count = [0]*256
-
+	l=[]
 	for i in range(len(pattern)):
 		pattern_count[ord(pattern[i])]+=1
 		string_count[ord(string[i])]+=1
 	
 	for i in range(len(pattern), len(string)):
 		if string_count==pattern_count:
-			print i-len(pattern)
+			l.append(i-len(pattern))
 
 		# instead of calculating the count of the 
 		# window again and again, just remove the
@@ -22,8 +22,10 @@ def anagram_substring(string, pattern):
 		string_count[ord(string[i-len(pattern)])]-=1
 
 	if string_count==pattern_count:
-		print len(string) - len(pattern)
+		l.append(len(string) - len(pattern))
 
+	print l
 
 anagram_substring('forxxorfxdfro', 'for')
 anagram_substring('dddddaaa', 'dad')
+anagram_substring('barfoothefoobarman', 'foobar')

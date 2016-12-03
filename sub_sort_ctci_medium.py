@@ -19,7 +19,7 @@ def sub_sort(l):
 	m=[]
 
 	for i in range(1, length):
-		if l[i]>p[-1]:
+		if l[i]>=p[-1]:
 			p.append(l[i])
 		else:
 			m.append(l[i])
@@ -45,3 +45,4 @@ print sub_sort([5,4,3,2,1])
 print sub_sort([1,2,4,7,10,11,7,12,6,7,16,18,19,5])
 print sub_sort([1,2,3,4,5])
 print sub_sort([7,10,11,7,12,6,7,16,18,19])
+
