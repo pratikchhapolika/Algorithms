@@ -32,9 +32,6 @@ def palindrome(str1):
 	while d.size()>1 and equal:
 		first=d.remove_front()
 		last=d.remove_rear()
-		# if first==last:
-		# 	equal=True
-		# 	continue
 		if first!=last:
 			equal=False
 			

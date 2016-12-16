@@ -8,7 +8,6 @@ def hop(n):
 		return d[n]
 	else:
 		d[n]=hop(n-1)+hop(n-2)+hop(n-3)
-	
 	return d[n]
 
-print hop(1)
+print hop(3)

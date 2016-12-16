@@ -1,4 +1,4 @@
-n=4
+n=3
 def paran(p,i):
 	if i<n:
 		paran('()'+p,i+1)
