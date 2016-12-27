@@ -10,9 +10,10 @@ def ant(k):
 	
 	ant_pos=5
 	a,b=nodeToPosId(ant_pos,length)
+
 	direction='right'
 
-	while k>0:
+	while k>0 and a>=0 and a<length and b>=0 and b<len(grid[0]):
 		if grid[a][b]==1:
 			grid[a][b]=0
 			if direction=='right':

@@ -1,11 +1,10 @@
 import math
 def trailingZeroes(n):
-	l=[]
-	for i in xrange(1,50):
-		a=math.floor(n/(5**i))
-		print a
-		if a>0:
-			l.append(a)
-	print int(sum(l))		
+	count = 0
+	i = 5
+	while n/i>0:
+		count+=(n/i)
+		i*=5		
+	print count
 
-trailingZeroes(625)
+trailingZeroes(25)

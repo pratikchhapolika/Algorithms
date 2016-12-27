@@ -5,7 +5,6 @@ def valid(number,index,word):
 	if index==len(number):
 		print word
 		return
-
 	else:
 		digit=number[index]
 		letters=d[int(digit)]

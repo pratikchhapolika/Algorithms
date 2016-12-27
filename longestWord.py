@@ -1,54 +1,57 @@
-# def many(l):
-# 	a=[]
-# 	b=[]
-# 	for i in range(1,len(l)+1):
-# 		for j in range(i):
-# 			a.append(''.join(l[j:i])) 
+def unscramble(s,d):
+	i=0
+	j=0
+	l=[]
+	length = len(s)
+	while j<length:
+		r = s[i:j+1]
+		if r in d and j==length-1:
+			return
+		if r not in d:
+			j+=1
 
-# 	k=l[::-1]
-# 	for i in range(1,len(k)+1):
-# 		for j in range(i):
-# 			b.append(''.join(k[j:i]))
+		else:
+			temp = j
+			j+=1
+			while j<length:
+				temp_r = s[i:j+1]
+				if temp_r not in d:
+					j+=1
+				else:
+					temp = j
+					j+=1
 
+			l.append(s[i:temp+1])
+			j = temp+1
+			i = j
 
-# 	return a+b
-
-# def longest(l):
-# 	new={}
-# 	combo=[]
-# 	p=[]
-# 	for i in range(len(l)):
-# 		rest=l[:i]+l[i+1:]
-# 		for j in rest:
-# 			combo.append(l[i]+j)
-	
-# 	new_combo=many(l)
-
-# 	a=new_combo+combo
-# 	for i in set(a):
-# 		p.append(i)
-
-# 	for i in p:
-# 		print i
-# 		if i in l:
-# 			new[i]=len(i)
-
-# 	print max(new,key=new.get)
-# 	print new
+	print l
 
 
 def longest(l):
-	new={}
-	combo=[]
-	p=[]
-	for i in range(len(l)):
-		rest=l[:i]+l[i+1:]
-		for j in rest:
-			combo=l[i]+j
-			if combo in l:
-				new[combo]=len(combo)
-	print new
-	print max(new,key=new.get)
+	d={}
+	m=0
+	p=[None]
+	for i in l:
+		d[i]=True
+	
+	# for i in l:
+	# 	for j in range(1,len(i)):
+	# 		left = i[:j]
+	# 		right = i[j:]
 
-longest(['cat','banana','dog','nana','walk','walker','dogwalker','dognana'])
+	# 		if left in d and right in d:
+	# 			if len(i)>m:
+	# 				m = len(i)
+	# 				p.pop()
+	# 				p.append(i)
+
+	for i in l: 
+		unscramble(i, d)
+
+
+	# print m, p
+			
+
+longest(['cat','banana','dog', 'dogs','nana','walk','walker','catdogswalker','dognana'])
 
