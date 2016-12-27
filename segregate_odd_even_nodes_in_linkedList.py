@@ -1,91 +1,117 @@
-class Node(object):
+# Better solution, O(n) time and O(1) space
+class Solution(object):
+    def oddEvenList(self, head):
+        if head != None:
+            
+            odd = head
+            even = head.next
+            head_even = even
+            
+            while even!=None and even.next!=None:
+                odd.next = odd.next.next
+                even.next = even.next.next
+                odd = odd.next
+                even = even.next
+            
+            odd.next = head_even
+            
+        return head
 
-	def __init__(self,initdata):
-		self.data=initdata
-		self.next=None
 
-class LinkedList:
+
+# class Node(object):
+
+# 	def __init__(self,initdata):
+# 		self.data=initdata
+# 		self.next=None
+
+# class LinkedList:
  
-	# Function to initialize head
-	def __init__(self):
-		self.head = None
+# 	# Function to initialize head
+# 	def __init__(self):
+# 		self.head = None
  
-	# Function to insert a new node at the beginning
-	def add(self, new_data):
-		new_node = Node(new_data)
-		new_node.next = self.head
-		self.head = new_node
+# 	# Function to insert a new node at the beginning
+# 	def add(self, new_data):
+# 		new_node = Node(new_data)
+# 		new_node.next = self.head
+# 		self.head = new_node
 
-	def add_last(self, new_data):
-		tail = None
-		current = self.head
+# 	def add_last(self, new_data):
+# 		tail = None
+# 		current = self.head
 
-		while current!=None and current.next!=None:
-			current=current.next
-		tail = current
+# 		while current!=None and current.next!=None:
+# 			current=current.next
+# 		tail = current
 		
-		new_node = Node(new_data)
-		tail.next = new_node
-		tail = new_node
+# 		new_node = Node(new_data)
+# 		tail.next = new_node
+# 		tail = new_node
 
-	def display(self):
-		current = self.head
-		while current!=None:
-			print current.data,
-			current=current.next
+# 	def display(self):
+# 		current = self.head
+# 		while current!=None:
+# 			print current.data,
+# 			current=current.next
 
-	def gettail(self):
-		tail = None
-		current = self.head
+# 	def gettail(self):
+# 		tail = None
+# 		current = self.head
 
-		while current!=None and current.next!=None:
-			current=current.next
-		tail = current
-		return tail
+# 		while current!=None and current.next!=None:
+# 			current=current.next
+# 		tail = current
+# 		return tail
 
-	def remove(self,item):
-		current=self.head
-		found=False
-		previous=None
+# 	def remove(self,item):
+# 		current=self.head
+# 		found=False
+# 		previous=None
 
-		while not found:
-			if current.data == item:
-				found=True
-			else:
-				previous=current
-				current=current.next
+# 		while not found:
+# 			if current.data == item:
+# 				found=True
+# 			else:
+# 				previous=current
+# 				current=current.next
 
-		if previous==None:
-			self.head=current.next
-		else:
-			previous.next = current.next
+# 		if previous==None:
+# 			self.head=current.next
+# 		else:
+# 			previous.next = current.next
 
-	def segregate(self):
-		l=[]
-		current = self.head
-		while current!=None:
-			if current.data%2!=0:
-				l.append(current.data)
-				self.remove(current.data)
-			current = current.next
-		return l
+# 	def segregate(self):
+# 		l=[]
+# 		current = self.head
+# 		while current!=None:
+# 			if current.data%2!=0:
+# 				l.append(current.data)
+# 				self.remove(current.data)
+# 			current = current.next
+# 		return l
 
-mylist=LinkedList()
-mylist.add(6)
-mylist.add(7)
-mylist.add(1)
-mylist.add(4)
-mylist.add(5)
-mylist.add(10)
-mylist.add(12)
-mylist.add(8)
-mylist.add(15)
-mylist.add(17)
+# mylist=LinkedList()
+# mylist.add(6)
+# mylist.add(7)
+# mylist.add(1)
+# mylist.add(4)
+# mylist.add(5)
+# mylist.add(10)
+# mylist.add(12)
+# mylist.add(8)
+# mylist.add(15)
+# mylist.add(17)
 
-p = []
-p = mylist.segregate()
+# p = []
+# p = mylist.segregate()
 
-for i in p:
-	mylist.add_last(i)
+# for i in p:
+# 	mylist.add_last(i)
 
-mylist.display()
+# mylist.display()
+
+
+
+
+
