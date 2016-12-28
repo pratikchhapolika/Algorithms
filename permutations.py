@@ -12,7 +12,7 @@ def permutation(lst):
 	# more than 1 characters
  
 	l = [] # empty list that will store current permutation
- 
+	
 	# Iterate the input(lst) and calculate the permutation
 	for i in range(len(lst)):
 		m = lst[i]
@@ -31,6 +31,6 @@ def permutation(lst):
  
 
 # Driver program to test above function
-data = list('123')
+data = [1,2,3]
 for p in permutation(data):
 	print p

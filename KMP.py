@@ -40,3 +40,4 @@ def failure_function(pattern):
 
 
 kmp('ABABDABACDABABCABAB', 'ABABCABAB')
+kmp('abate', 'bat')

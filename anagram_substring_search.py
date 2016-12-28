@@ -29,3 +29,4 @@ def anagram_substring(string, pattern):
 anagram_substring('forxxorfxdfro', 'for')
 anagram_substring('dddddaaa', 'dad')
 anagram_substring('barfoothefoobarman', 'foobar')
+anagram_substring('abate', 'bat')
