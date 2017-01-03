@@ -33,15 +33,15 @@ tree.right.insert_right(5)
 
 
 # O(n) solution
-def path(tree, nodes=[]):
+def path(tree, l, nodes=[]):
 	if tree==None:
 		return
 	if tree.left==None and tree.right==None:
 		nodes = nodes + [tree.key]
-		print nodes 
+		l.append(nodes)
 	else:
-		path(tree.left, nodes+[tree.key])
-		path(tree.right, nodes+[tree.key])
+		path(tree.left, l, nodes+[tree.key])
+		path(tree.right, l, nodes+[tree.key])
 
 # def all_paths(tree):
 # 	if tree==None:
@@ -52,4 +52,9 @@ def path(tree, nodes=[]):
 # 	if tree.right:
 # 		all_paths(tree.right)
 
-path(tree)
+l=[]
+path(tree, l)
+
+for i in l:
+	print type(''.join(map(str, i)))
+
