@@ -44,5 +44,4 @@ def find_triplets(l,n):
 
 print find_triplets([12,3,4,1,6,9], 24)
 print find_triplets([-1,0,1,2,-1,-4], 0)
-print
 
