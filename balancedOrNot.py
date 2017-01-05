@@ -8,15 +8,15 @@ tree.left.insert_right(5)
 tree.left.left.insert_left(8)
 tree.right.insert_left(6)
 
-def height(tree):
-	if tree==None:
-		return 0
-	else:
-		return max(height(tree.left), height(tree.right))+1
+# def height(tree):
+# 	if tree==None:
+# 		return 0
+# 	else:
+# 		return max(height(tree.left), height(tree.right))+1
 
 def balanced(tree):
 	if tree==None:
-		return -1
+		return True
 	else:
 		# h1=height(tree.left)
 		# h2=height(tree.right)

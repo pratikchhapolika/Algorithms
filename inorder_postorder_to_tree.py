@@ -26,6 +26,7 @@ def in_post(inorder, postorder, start, end):
 inorder = [4, 8, 2, 5, 1, 6, 3, 7]
 postorder = [8, 4, 5, 2, 6, 7, 3, 1]
 
+
 in_post.index = len(postorder)-1
 
 root = in_post(inorder, postorder, 0, len(postorder)-1)
