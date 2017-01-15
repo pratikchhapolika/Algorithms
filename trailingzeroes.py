@@ -1,4 +1,3 @@
-import math
 def trailingZeroes(n):
 	count = 0
 	i = 5
