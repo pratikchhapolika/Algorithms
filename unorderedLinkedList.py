@@ -76,7 +76,7 @@ class UnorderedList(object):
 
 		self.head=previous
 
-	def display(self, node):
+	def display(self):
 		current=self.head
 		
 		while current!=None:
@@ -103,13 +103,12 @@ class UnorderedList(object):
 	# this calculates the middle element in the list without
 	# calculating the length of the linked list
 	def middle(self):
-		current=self.head
-		previous=self.head
-		while current!=None and current.next!=None:
-			current=current.next.next
-			previous=previous.next
-		print previous.data
-
+		fast=self.head
+		slow=self.head
+		while fast!=None and fast.next!=None:
+			fast=fast.next.next
+			slow=slow.next
+		print slow.data
 
 mylist=UnorderedList()
 mylist.add(31)
@@ -120,8 +119,8 @@ mylist.add(26)
 mylist.add(54)
 mylist.add(10)
 
-mylist.display(mylist.head)
-print
+# mylist.display(mylist.head)
+# print
 # print mylist.search(77)
 # mylist.size()
 # mylist.remove(17)
@@ -132,5 +131,4 @@ print
 # print
 # mylist.index(1)
 # print
-# mylist.middle()
-
+mylist.middle()
