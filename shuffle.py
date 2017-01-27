@@ -4,7 +4,7 @@ def Shuffle(l):
 	p=[]
 	n=len(l)-1
 	for i in range(n):
-		r=randint(0,n)
+		r=randint(i,n)
 		l[i],l[r]=l[r],l[i]
 	return l
 	
