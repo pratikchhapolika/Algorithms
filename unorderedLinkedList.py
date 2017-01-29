@@ -110,14 +110,16 @@ class UnorderedList(object):
 			slow=slow.next
 		print slow.data
 
+
 mylist=UnorderedList()
+mylist.add(82)
 mylist.add(31)
 mylist.add(77)
-# mylist.add(17)
-# mylist.add(93)
-# mylist.add(26)
-# mylist.add(54)
-# mylist.add(10)
+mylist.add(17)
+mylist.add(93)
+mylist.add(26)
+mylist.add(54)
+mylist.add(10)
 
 # mylist.display(mylist.head)
 # print
@@ -126,9 +128,10 @@ mylist.add(77)
 # mylist.remove(17)
 # mylist.display()
 # print "The reversed linked list is:"
-mylist.reverse()
-mylist.display()
+# mylist.reverse()
+# mylist.display()
 # print
 # mylist.index(1)
 # print
 # mylist.middle()
+
