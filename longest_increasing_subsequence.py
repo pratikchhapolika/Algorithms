@@ -35,26 +35,9 @@ def increasing_subsequence(X):
 
 	return lis[::-1]
 
-X=[13,14,10,11,12]
-print increasing_subsequence(X)
+print increasing_subsequence([13,14,10,11,12])
+print increasing_subsequence([1,3,2,3,4,8,7,9])
 
-###############################################################################
-
-# Time Complexity = O(2^n)
-
-# from itertools import combinations
-
-# # l=[3,2,6,4,5,1]
-# # l=[0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]
-# l=[13,14,10,11,12]
-
-# def longest(l):
-# 	for i in range(len(l),0,-1):
-# 		for sub in combinations(l,i):
-# 			if list(sub)==sorted(sub):
-# 				return sub
-
-# print longest(l)
 
 
 

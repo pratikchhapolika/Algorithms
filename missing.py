@@ -5,3 +5,4 @@ for i in range(len(l)-1):
 	while j>1:
 		print l[i]+j-1
 		j-=1
+		

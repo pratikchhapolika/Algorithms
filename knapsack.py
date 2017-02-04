@@ -10,7 +10,7 @@ def Knapsack(W,wtList,valList,n):
 				l[i][j]=l[i-1][j]
 			else:
 				# return max(Knapsack(W,wtList,valList,n-1),valList[n-1]+Knapsack(W-wtList[n-1],wtList,valList,n-1))
-				l[i][j]=max(l[i-1][j], wtList[i-1]+l[i-1][j-wtList[i-1]])
+				l[i][j]=max(l[i-1][j], valList[i-1]+l[i-1][j-wtList[i-1]])
 
 	print l[n][W]
 
