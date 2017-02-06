@@ -11,7 +11,7 @@ def threeSumClosest(l, target):
 				return sum
 			if abs(target-sum) < abs(target-closest):
 				closest = sum
-			elif l[i]+l[j]+l[k] < target:
+			if l[i]+l[j]+l[k] < target:
 				j+=1
 			else:
 				k-=1
