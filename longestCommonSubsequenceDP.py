@@ -40,7 +40,7 @@ def lcs(x,y):
 
 	print final[::-1]
 
-s='linkedininininin'
+s='linkedininin'
 r = s[::-1]
 lcs(s,r)
-print len(s)
+

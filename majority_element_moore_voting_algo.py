@@ -28,4 +28,6 @@ print majorityElement([3,3,4,2,4,4,2,4,4])
 print majorityElement([3,3,4,2,4,4,2,4])
 print majorityElement([1,3,3,1,2])
 print majorityElement([10,9,9,9,10])
+print majorityElement([10.548, 451.05546, 10.548, 213154.84, 2.154, 2.369])
+
 

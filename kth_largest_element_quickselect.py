@@ -4,7 +4,7 @@ def partition(nums, start, end):
 		
 	for i in range(start, end):
 		if nums[i] > pivot:
-			nums[pIndex], nums[i] = nums[i], nums[pIndex]  #swap if element is lesser than pivot
+			nums[pIndex], nums[i] = nums[i], nums[pIndex]
 			pIndex+=1
 		
 	nums[end], nums[pIndex] = nums[pIndex], nums[end]   # swap pivot with element at partition index

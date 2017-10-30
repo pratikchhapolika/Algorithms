@@ -7,4 +7,4 @@ def pairs_sum(l, target):
 		else:
 			d[target-l[i]] = l[i]
 
-pairs_sum([3,2,5,4,3], 6)
+pairs_sum([1, 5, 7, -1, 5], 6)
